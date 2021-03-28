@@ -1,0 +1,21 @@
+server:
+  port: ${PORT:8084}
+
+spring:
+  r2dbc:
+    url: "r2dbc:postgresql://${PG_HOST:localhost}:${PG_PORT:5432}/${PG_DATABASE:respadb}?schema=${PG_SCHEMA:respa}"
+    username: ${PG_USER:respa}
+    password: ${PG_PASSWORD:7861pasd}
+
+  flyway:
+    url: "jdbc:postgresql://${PG_HOST:localhost}:${PG_PORT:5432}/${PG_DATABASE:respadb}?schema=${PG_SCHEMA:respa}"
+    user: ${PG_USER:respa}
+    password: ${PG_PASSWORD:7861pasd}
+    schemas: respa
+
+logging:
+  level:
+    org:
+      springframework:
+        #      trace
+        r2dbc: DEBUG

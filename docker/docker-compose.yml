@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  database:
+    container_name: postgres
+    image: postgres:11.2
+    environment:
+      POSTGRES_USER: respa
+      POSTGRES_PASSOWORD: 7861pasd
+      POSTGRES_DB: respadb
+    volumes:
+    - ./postgresdb/data:/var/lib/postgresql/data
+    ports:
+    - "5432:5432"
+    restart: always
