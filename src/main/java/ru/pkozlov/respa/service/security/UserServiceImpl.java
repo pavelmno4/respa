@@ -8,8 +8,8 @@ import reactor.core.publisher.Mono;
 import ru.pkozlov.respa.db.entity.Role;
 import ru.pkozlov.respa.db.entity.User;
 import ru.pkozlov.respa.db.repository.RoleRepository;
+import ru.pkozlov.respa.db.repository.UserRepository;
 import ru.pkozlov.respa.db.repository.UserRoleRepository;
-import ru.pkozlov.respa.db.repository.user.UserRepository;
 import ru.pkozlov.respa.dto.security.UserDto;
 
 import java.time.LocalDateTime;

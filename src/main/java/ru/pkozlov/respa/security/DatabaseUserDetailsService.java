@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Mono;
 import ru.pkozlov.respa.db.repository.RoleRepository;
-import ru.pkozlov.respa.db.repository.user.UserRepository;
+import ru.pkozlov.respa.db.repository.UserRepository;
 
 @Component
 @RequiredArgsConstructor

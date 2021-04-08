@@ -27,6 +27,9 @@ public class Participant implements EntityId {
     @Column("birth_year")
     private Integer birthYear;
 
+    @Column
+    private String sex;
+
     @Column("team_id")
     private Long teamId;
 
