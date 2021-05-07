@@ -20,7 +20,7 @@ public class ParticipantRouter {
                 .path("/participant", builder -> builder
                         .POST("/save", accept(MediaType.APPLICATION_JSON), handler::save)
                         .GET("/{id}", handler::findById)
-                        .GET("/list/{age}/{weight}", handler::findAllInCategory)
+                        .GET("/list/{age}/{weightCategory}", handler::findAllInCategory)
                         .DELETE("/{id}", handler::deleteById))
                 .build();
     }

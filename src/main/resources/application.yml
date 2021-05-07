@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8084}
+  port: ${PORT:8081}
 
 spring:
   r2dbc:
@@ -13,9 +13,9 @@ spring:
     password: ${PG_PASSWORD:7861pasd}
     schemas: respa
 
-logging:
-  level:
-    org:
-      springframework:
-        #      trace
-        r2dbc: DEBUG
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        #      trace
+#        r2dbc: DEBUG

@@ -1,6 +1,22 @@
 version: '3.1'
 
 services:
+  frontend:
+    image: respa-frontend-app
+    build:
+      context: ../client
+      dockerfile: Dockerfile
+    ports:
+      - "8085:80"
+  backend:
+    image: respa-backend-app
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    environment:
+      PG_HOST: database
+    ports:
+    - "8081:8081"
   database:
     container_name: postgres
     image: postgres:11.2

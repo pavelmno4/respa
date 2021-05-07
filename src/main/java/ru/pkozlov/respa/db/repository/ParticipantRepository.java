@@ -8,6 +8,6 @@ import ru.pkozlov.respa.db.entity.Participant;
 public interface ParticipantRepository extends ReactiveCrudRepository<Participant, Long> {
 
     @Query("select * from respa.participant " +
-            "where birth_year = :age and weight = :weight")
-    Flux<Participant> findAllInCategory(Long age, Long weight);
+            "where birth_year = :age and weight_category = :weightCategory")
+    Flux<Participant> findAllInCategory(Integer age, Integer weightCategory);
 }

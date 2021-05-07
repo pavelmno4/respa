@@ -28,13 +28,13 @@ public class Participant implements EntityId {
     private Integer birthYear;
 
     @Column
-    private String sex;
+    private String gender;
 
     @Column("team_id")
     private Long teamId;
 
     @Column("weight")
-    private Integer weight;
+    private Double weight;
 
     @Column("weight_category")
     private Integer weightCategory;

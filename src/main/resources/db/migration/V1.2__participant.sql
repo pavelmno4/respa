@@ -4,9 +4,9 @@ CREATE TABLE respa.participant
     first_name  varchar(100),
     last_name   varchar(100),
     birth_year  int,
-    sex varchar(1),
+    gender varchar(1),
     team_id    bigint,
-    weight  int,
+    weight  real,
     weight_category int,
     constraint participant_pk primary key (participant_id)
 );
@@ -17,7 +17,7 @@ COMMENT ON COLUMN respa.participant.participant_id IS 'Уникальный ид
 COMMENT ON COLUMN respa.participant.first_name IS 'Имя участника';
 COMMENT ON COLUMN respa.participant.last_name IS 'Фамилия участника';
 COMMENT ON COLUMN respa.participant.birth_year IS 'Год рождения';
-COMMENT ON COLUMN respa.participant.sex IS 'Пол участника';
+COMMENT ON COLUMN respa.participant.gender IS 'Пол участника';
 COMMENT ON COLUMN respa.participant.team_id IS 'Идентификатор команды';
 COMMENT ON COLUMN respa.participant.weight IS 'Вес';
 COMMENT ON COLUMN respa.participant.weight_category IS 'Весовая категория';

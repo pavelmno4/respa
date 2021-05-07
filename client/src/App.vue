@@ -1,31 +1,30 @@
 <template>
-  <div id="app">
+    <div id="app">
 
-    <v-app>
-      <Header />
-      <MainPanel />
-      <Footer />
-    </v-app>
-  </div>
+        <v-app>
+            <Navigation/>
+            <MainPanel/>
+            <Footer/>
+        </v-app>
+    </div>
 </template>
 
 <script>
-import Header from '@/components/root/Header';
-import MainPanel from '@/components/root/MainPanel';
-import Footer from '@/components/root/Footer';
+    import Navigation from '@/components/root/Navigation';
+    import MainPanel from '@/components/root/MainPanel';
+    import Footer from '@/components/root/Footer';
 
 
-export default {
-  name: 'App',
+    export default {
+        name: 'App',
 
-  components: {
-    Header,
-    MainPanel,
-    Footer
-  },
-  data() {
-    return {
+        components: {
+            Navigation,
+            MainPanel,
+            Footer
+        },
+        data() {
+            return {}
+        }
     }
-  }
-}
 </script>

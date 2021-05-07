@@ -1,5 +1,5 @@
 INSERT INTO respa.usr (user_id, login, password, status, last_update_date)
-VALUES (nextval('respa.usr_seq'), 'respa_admin', '$2a$10$VA5jMwoc65bxnqPMmT7ldeOnh2bNLSZzpX3dpRn/jV25BNmlvEOtK',
+VALUES (nextval('respa.usr_seq'), 'respa_admin', '$2a$10$LZzj8xPk2bLr7EsW7rrkO.QbMNLUVpzDtiYmsI0LExIBElfppQy16',
         true, current_timestamp);
 
 INSERT INTO respa.user_role (user_role_id, user_id, role_id)

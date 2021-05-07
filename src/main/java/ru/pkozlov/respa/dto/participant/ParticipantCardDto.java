@@ -14,7 +14,8 @@ public class ParticipantCardDto {
     private String firstName;
     private String lastName;
     private String birthYear;
-    private String sex;
+    private String gender;
     private String weight;
     private TeamDto team;
+    private Integer weightCategory;
 }

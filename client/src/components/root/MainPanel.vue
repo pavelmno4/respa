@@ -1,7 +1,9 @@
 <template>
     <v-main>
         <v-container>
-            <Greeting/>
+            <router-view>
+                <Greeting/>
+            </router-view>
         </v-container>
     </v-main>
 </template>

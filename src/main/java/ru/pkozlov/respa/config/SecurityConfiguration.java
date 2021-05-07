@@ -21,8 +21,7 @@ public class SecurityConfiguration {
                 .httpBasic().disable()
                 .formLogin().and()
                 .authorizeExchange(exchanges -> exchanges
-                        .pathMatchers("/greeting").permitAll()
-                        .pathMatchers("/**").authenticated()
+                        .pathMatchers("/**").permitAll()
                 )
                 .build();
     }

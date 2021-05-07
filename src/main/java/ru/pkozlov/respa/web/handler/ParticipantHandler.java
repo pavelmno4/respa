@@ -46,15 +46,15 @@ public class ParticipantHandler {
     }
 
     public Mono<ServerResponse> findAllInCategory(ServerRequest request) {
-        Long age = Long.parseLong(request.pathVariable("age"));
-        Long weight = Long.parseLong(request.pathVariable("weight"));
+        Integer age = Integer.parseInt(request.pathVariable("age"));
+        Integer weightCategory = Integer.parseInt(request.pathVariable("weightCategory"));
 
         return ServerResponse
                 .ok()
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(
-                        participantService.findAllInCategory(age, weight),
-                        Participant.class
+                        participantService.findAllInCategory(age, weightCategory),
+                        ParticipantCardDto.class
                 );
     }
 

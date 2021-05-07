@@ -22,7 +22,7 @@ public class ParticipantRequestValidator extends RequestValidator<ParticipantCar
         checkNameField(participantCardDto.getFirstName(), errors);
         checkNameField(participantCardDto.getLastName(), errors);
         checkNumberFormat(participantCardDto.getBirthYear(), errors);
-        checkSexField(participantCardDto.getSex(), errors);
+        checkSexField(participantCardDto.getGender(), errors);
         checkNumberFormat(participantCardDto.getWeight(), errors);
         checkNameField(participantCardDto.getTeam().getTeamName(), errors);
         checkNameField(participantCardDto.getTeam().getCity(), errors);
@@ -44,7 +44,7 @@ public class ParticipantRequestValidator extends RequestValidator<ParticipantCar
 
     private void checkNumberFormat(String field, Errors errors) {
         if (!StringUtils.hasLength(field) ||
-                Pattern.compile("[^\\d]").matcher(field).find()) {
+                Pattern.compile("[^\\d.]").matcher(field).find()) {
             errors.reject("field.required.group", "error.number.field.format");
         }
     }

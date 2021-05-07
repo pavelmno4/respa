@@ -38,8 +38,9 @@ public class ParticipantServiceImpl implements ParticipantService {
     }
 
     @Override
-    public Flux<Participant> findAllInCategory(Long age, Long weight) {
-        return participantRepo.findAllInCategory(age, weight);
+    public Flux<ParticipantCardDto> findAllInCategory(Integer age, Integer weightCategory) {
+        return participantRepo.findAllInCategory(age, weightCategory)
+                .map(p -> modelMapper.map(p, ParticipantCardDto.class));
     }
 
     @Override
@@ -48,6 +49,7 @@ public class ParticipantServiceImpl implements ParticipantService {
     }
 
     private Mono<ParticipantCardDto> saveNewParticipant(Participant participantNew, Team team) {
+        participantNew.setWeightCategory((int) Math.ceil(participantNew.getWeight()));
         participantNew.setTeamId(team.getId());
         return participantRepo.save(participantNew)
                 .map(savedParticipant -> modelMapper.map(savedParticipant, ParticipantCardDto.class));
